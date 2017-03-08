@@ -1,11 +1,10 @@
-ifneq ($(BUILD_TINY_ANDROID),true)
-
 LOCAL_PATH := $(call my-dir)
 
 include $(CLEAR_VARS)
 
 LOCAL_MODULE := libloc_api_v02
 
+LOCAL_MODULE_OWNER := qti
 LOCAL_MODULE_TAGS := optional
 
 ifeq ($(TARGET_DEVICE),apq8026_lw)
@@ -24,6 +23,7 @@ LOCAL_SHARED_LIBRARIES := \
     libloc_core \
     libgps.utils \
     libdl \
+    liblog \
     libloc_pla
 
 LOCAL_SRC_FILES = \
@@ -55,10 +55,7 @@ LOCAL_C_INCLUDES := \
     $(TARGET_OUT_HEADERS)/qmi/inc \
     $(TARGET_OUT_HEADERS)/gps.utils \
     $(TARGET_OUT_HEADERS)/libloc_ds_api \
-    $(TARGET_OUT_HEADERS)/libloc_pla
-
-LOCAL_PRELINK_MODULE := false
+    $(TARGET_OUT_HEADERS)/libloc_pla \
+    $(TARGET_OUT_HEADERS)/liblocation_api
 
 include $(BUILD_SHARED_LIBRARY)
-
-endif # not BUILD_TINY_ANDROID
