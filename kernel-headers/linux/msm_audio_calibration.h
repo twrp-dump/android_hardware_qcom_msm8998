@@ -101,570 +101,599 @@ enum {
   AFE_FB_SPKR_PROT_TH_VI_CAL_TYPE,
   AFE_FB_SPKR_PROT_EX_VI_CAL_TYPE,
 /* WARNING: DO NOT EDIT, AUTO-GENERATED CODE - SEE TOP FOR INSTRUCTIONS */
+  AFE_SIDETONE_IIR_CAL_TYPE,
   MAX_CAL_TYPES,
 };
 #define AFE_FB_SPKR_PROT_TH_VI_CAL_TYPE AFE_FB_SPKR_PROT_TH_VI_CAL_TYPE
-#define AFE_FB_SPKR_PROT_EX_VI_CAL_TYPE AFE_FB_SPKR_PROT_EX_VI_CAL_TYPE
 /* WARNING: DO NOT EDIT, AUTO-GENERATED CODE - SEE TOP FOR INSTRUCTIONS */
+#define AFE_FB_SPKR_PROT_EX_VI_CAL_TYPE AFE_FB_SPKR_PROT_EX_VI_CAL_TYPE
+#define AFE_SIDETONE_IIR_CAL_TYPE AFE_SIDETONE_IIR_CAL_TYPE
 enum {
   VERSION_0_0,
+/* WARNING: DO NOT EDIT, AUTO-GENERATED CODE - SEE TOP FOR INSTRUCTIONS */
 };
 enum {
-/* WARNING: DO NOT EDIT, AUTO-GENERATED CODE - SEE TOP FOR INSTRUCTIONS */
   PER_VOCODER_CAL_BIT_MASK = 0x10000,
 };
+/* WARNING: DO NOT EDIT, AUTO-GENERATED CODE - SEE TOP FOR INSTRUCTIONS */
 #define MAX_IOCTL_CMD_SIZE 512
 struct audio_cal_header {
-/* WARNING: DO NOT EDIT, AUTO-GENERATED CODE - SEE TOP FOR INSTRUCTIONS */
   int32_t data_size;
   int32_t version;
+/* WARNING: DO NOT EDIT, AUTO-GENERATED CODE - SEE TOP FOR INSTRUCTIONS */
   int32_t cal_type;
   int32_t cal_type_size;
-/* WARNING: DO NOT EDIT, AUTO-GENERATED CODE - SEE TOP FOR INSTRUCTIONS */
 };
 struct audio_cal_type_header {
+/* WARNING: DO NOT EDIT, AUTO-GENERATED CODE - SEE TOP FOR INSTRUCTIONS */
   int32_t version;
   int32_t buffer_number;
-/* WARNING: DO NOT EDIT, AUTO-GENERATED CODE - SEE TOP FOR INSTRUCTIONS */
 };
 struct audio_cal_data {
+/* WARNING: DO NOT EDIT, AUTO-GENERATED CODE - SEE TOP FOR INSTRUCTIONS */
   int32_t cal_size;
   int32_t mem_handle;
-/* WARNING: DO NOT EDIT, AUTO-GENERATED CODE - SEE TOP FOR INSTRUCTIONS */
 };
 struct audio_cal_type_alloc {
+/* WARNING: DO NOT EDIT, AUTO-GENERATED CODE - SEE TOP FOR INSTRUCTIONS */
   struct audio_cal_type_header cal_hdr;
   struct audio_cal_data cal_data;
-/* WARNING: DO NOT EDIT, AUTO-GENERATED CODE - SEE TOP FOR INSTRUCTIONS */
 };
 struct audio_cal_alloc {
+/* WARNING: DO NOT EDIT, AUTO-GENERATED CODE - SEE TOP FOR INSTRUCTIONS */
   struct audio_cal_header hdr;
   struct audio_cal_type_alloc cal_type;
-/* WARNING: DO NOT EDIT, AUTO-GENERATED CODE - SEE TOP FOR INSTRUCTIONS */
 };
 struct audio_cal_type_dealloc {
+/* WARNING: DO NOT EDIT, AUTO-GENERATED CODE - SEE TOP FOR INSTRUCTIONS */
   struct audio_cal_type_header cal_hdr;
   struct audio_cal_data cal_data;
-/* WARNING: DO NOT EDIT, AUTO-GENERATED CODE - SEE TOP FOR INSTRUCTIONS */
 };
 struct audio_cal_dealloc {
+/* WARNING: DO NOT EDIT, AUTO-GENERATED CODE - SEE TOP FOR INSTRUCTIONS */
   struct audio_cal_header hdr;
   struct audio_cal_type_dealloc cal_type;
-/* WARNING: DO NOT EDIT, AUTO-GENERATED CODE - SEE TOP FOR INSTRUCTIONS */
 };
 struct audio_cal_type_prepare {
+/* WARNING: DO NOT EDIT, AUTO-GENERATED CODE - SEE TOP FOR INSTRUCTIONS */
   struct audio_cal_type_header cal_hdr;
   struct audio_cal_data cal_data;
-/* WARNING: DO NOT EDIT, AUTO-GENERATED CODE - SEE TOP FOR INSTRUCTIONS */
 };
 struct audio_cal_prepare {
+/* WARNING: DO NOT EDIT, AUTO-GENERATED CODE - SEE TOP FOR INSTRUCTIONS */
   struct audio_cal_header hdr;
   struct audio_cal_type_prepare cal_type;
-/* WARNING: DO NOT EDIT, AUTO-GENERATED CODE - SEE TOP FOR INSTRUCTIONS */
 };
 struct audio_cal_type_post {
+/* WARNING: DO NOT EDIT, AUTO-GENERATED CODE - SEE TOP FOR INSTRUCTIONS */
   struct audio_cal_type_header cal_hdr;
   struct audio_cal_data cal_data;
-/* WARNING: DO NOT EDIT, AUTO-GENERATED CODE - SEE TOP FOR INSTRUCTIONS */
 };
 struct audio_cal_post {
+/* WARNING: DO NOT EDIT, AUTO-GENERATED CODE - SEE TOP FOR INSTRUCTIONS */
   struct audio_cal_header hdr;
   struct audio_cal_type_post cal_type;
-/* WARNING: DO NOT EDIT, AUTO-GENERATED CODE - SEE TOP FOR INSTRUCTIONS */
 };
 struct audio_cal_info_metainfo {
+/* WARNING: DO NOT EDIT, AUTO-GENERATED CODE - SEE TOP FOR INSTRUCTIONS */
   uint32_t nKey;
 };
-/* WARNING: DO NOT EDIT, AUTO-GENERATED CODE - SEE TOP FOR INSTRUCTIONS */
 enum {
   RX_DEVICE,
+/* WARNING: DO NOT EDIT, AUTO-GENERATED CODE - SEE TOP FOR INSTRUCTIONS */
   TX_DEVICE,
   MAX_PATH_TYPE
-/* WARNING: DO NOT EDIT, AUTO-GENERATED CODE - SEE TOP FOR INSTRUCTIONS */
 };
 struct audio_cal_info_adm_top {
+/* WARNING: DO NOT EDIT, AUTO-GENERATED CODE - SEE TOP FOR INSTRUCTIONS */
   int32_t topology;
   int32_t acdb_id;
-/* WARNING: DO NOT EDIT, AUTO-GENERATED CODE - SEE TOP FOR INSTRUCTIONS */
   int32_t path;
   int32_t app_type;
+/* WARNING: DO NOT EDIT, AUTO-GENERATED CODE - SEE TOP FOR INSTRUCTIONS */
   int32_t sample_rate;
 };
-/* WARNING: DO NOT EDIT, AUTO-GENERATED CODE - SEE TOP FOR INSTRUCTIONS */
 struct audio_cal_info_audproc {
   int32_t acdb_id;
+/* WARNING: DO NOT EDIT, AUTO-GENERATED CODE - SEE TOP FOR INSTRUCTIONS */
   int32_t path;
   int32_t app_type;
-/* WARNING: DO NOT EDIT, AUTO-GENERATED CODE - SEE TOP FOR INSTRUCTIONS */
   int32_t sample_rate;
 };
+/* WARNING: DO NOT EDIT, AUTO-GENERATED CODE - SEE TOP FOR INSTRUCTIONS */
 struct audio_cal_info_audvol {
   int32_t acdb_id;
-/* WARNING: DO NOT EDIT, AUTO-GENERATED CODE - SEE TOP FOR INSTRUCTIONS */
   int32_t path;
   int32_t app_type;
+/* WARNING: DO NOT EDIT, AUTO-GENERATED CODE - SEE TOP FOR INSTRUCTIONS */
   int32_t vol_index;
 };
-/* WARNING: DO NOT EDIT, AUTO-GENERATED CODE - SEE TOP FOR INSTRUCTIONS */
 struct audio_cal_info_afe {
   int32_t acdb_id;
+/* WARNING: DO NOT EDIT, AUTO-GENERATED CODE - SEE TOP FOR INSTRUCTIONS */
   int32_t path;
   int32_t sample_rate;
-/* WARNING: DO NOT EDIT, AUTO-GENERATED CODE - SEE TOP FOR INSTRUCTIONS */
 };
 struct audio_cal_info_afe_top {
+/* WARNING: DO NOT EDIT, AUTO-GENERATED CODE - SEE TOP FOR INSTRUCTIONS */
   int32_t topology;
   int32_t acdb_id;
-/* WARNING: DO NOT EDIT, AUTO-GENERATED CODE - SEE TOP FOR INSTRUCTIONS */
   int32_t path;
   int32_t sample_rate;
+/* WARNING: DO NOT EDIT, AUTO-GENERATED CODE - SEE TOP FOR INSTRUCTIONS */
 };
 struct audio_cal_info_asm_top {
-/* WARNING: DO NOT EDIT, AUTO-GENERATED CODE - SEE TOP FOR INSTRUCTIONS */
   int32_t topology;
   int32_t app_type;
+/* WARNING: DO NOT EDIT, AUTO-GENERATED CODE - SEE TOP FOR INSTRUCTIONS */
 };
 struct audio_cal_info_audstrm {
-/* WARNING: DO NOT EDIT, AUTO-GENERATED CODE - SEE TOP FOR INSTRUCTIONS */
   int32_t app_type;
 };
+/* WARNING: DO NOT EDIT, AUTO-GENERATED CODE - SEE TOP FOR INSTRUCTIONS */
 struct audio_cal_info_aanc {
   int32_t acdb_id;
-/* WARNING: DO NOT EDIT, AUTO-GENERATED CODE - SEE TOP FOR INSTRUCTIONS */
 };
 #define MAX_HW_DELAY_ENTRIES 25
+/* WARNING: DO NOT EDIT, AUTO-GENERATED CODE - SEE TOP FOR INSTRUCTIONS */
 struct audio_cal_hw_delay_entry {
   uint32_t sample_rate;
-/* WARNING: DO NOT EDIT, AUTO-GENERATED CODE - SEE TOP FOR INSTRUCTIONS */
   uint32_t delay_usec;
 };
+/* WARNING: DO NOT EDIT, AUTO-GENERATED CODE - SEE TOP FOR INSTRUCTIONS */
 struct audio_cal_hw_delay_data {
   uint32_t num_entries;
-/* WARNING: DO NOT EDIT, AUTO-GENERATED CODE - SEE TOP FOR INSTRUCTIONS */
   struct audio_cal_hw_delay_entry entry[MAX_HW_DELAY_ENTRIES];
 };
+/* WARNING: DO NOT EDIT, AUTO-GENERATED CODE - SEE TOP FOR INSTRUCTIONS */
 struct audio_cal_info_hw_delay {
   int32_t acdb_id;
-/* WARNING: DO NOT EDIT, AUTO-GENERATED CODE - SEE TOP FOR INSTRUCTIONS */
   int32_t path;
   int32_t property_type;
+/* WARNING: DO NOT EDIT, AUTO-GENERATED CODE - SEE TOP FOR INSTRUCTIONS */
   struct audio_cal_hw_delay_data data;
 };
-/* WARNING: DO NOT EDIT, AUTO-GENERATED CODE - SEE TOP FOR INSTRUCTIONS */
 enum msm_spkr_prot_states {
   MSM_SPKR_PROT_CALIBRATED,
+/* WARNING: DO NOT EDIT, AUTO-GENERATED CODE - SEE TOP FOR INSTRUCTIONS */
   MSM_SPKR_PROT_CALIBRATION_IN_PROGRESS,
   MSM_SPKR_PROT_DISABLED,
-/* WARNING: DO NOT EDIT, AUTO-GENERATED CODE - SEE TOP FOR INSTRUCTIONS */
   MSM_SPKR_PROT_NOT_CALIBRATED,
   MSM_SPKR_PROT_PRE_CALIBRATED,
+/* WARNING: DO NOT EDIT, AUTO-GENERATED CODE - SEE TOP FOR INSTRUCTIONS */
   MSM_SPKR_PROT_IN_FTM_MODE
 };
-/* WARNING: DO NOT EDIT, AUTO-GENERATED CODE - SEE TOP FOR INSTRUCTIONS */
 #define MSM_SPKR_PROT_IN_FTM_MODE MSM_SPKR_PROT_IN_FTM_MODE
 enum msm_spkr_count {
+/* WARNING: DO NOT EDIT, AUTO-GENERATED CODE - SEE TOP FOR INSTRUCTIONS */
   SP_V2_SPKR_1,
   SP_V2_SPKR_2,
-/* WARNING: DO NOT EDIT, AUTO-GENERATED CODE - SEE TOP FOR INSTRUCTIONS */
   SP_V2_NUM_MAX_SPKRS
 };
+/* WARNING: DO NOT EDIT, AUTO-GENERATED CODE - SEE TOP FOR INSTRUCTIONS */
 struct audio_cal_info_spk_prot_cfg {
   int32_t r0[SP_V2_NUM_MAX_SPKRS];
-/* WARNING: DO NOT EDIT, AUTO-GENERATED CODE - SEE TOP FOR INSTRUCTIONS */
   int32_t t0[SP_V2_NUM_MAX_SPKRS];
   uint32_t quick_calib_flag;
+/* WARNING: DO NOT EDIT, AUTO-GENERATED CODE - SEE TOP FOR INSTRUCTIONS */
   uint32_t mode;
 };
-/* WARNING: DO NOT EDIT, AUTO-GENERATED CODE - SEE TOP FOR INSTRUCTIONS */
 struct audio_cal_info_sp_th_vi_ftm_cfg {
   uint32_t wait_time[SP_V2_NUM_MAX_SPKRS];
+/* WARNING: DO NOT EDIT, AUTO-GENERATED CODE - SEE TOP FOR INSTRUCTIONS */
   uint32_t ftm_time[SP_V2_NUM_MAX_SPKRS];
   uint32_t mode;
-/* WARNING: DO NOT EDIT, AUTO-GENERATED CODE - SEE TOP FOR INSTRUCTIONS */
 };
 struct audio_cal_info_sp_ex_vi_ftm_cfg {
+/* WARNING: DO NOT EDIT, AUTO-GENERATED CODE - SEE TOP FOR INSTRUCTIONS */
   uint32_t wait_time[SP_V2_NUM_MAX_SPKRS];
   uint32_t ftm_time[SP_V2_NUM_MAX_SPKRS];
-/* WARNING: DO NOT EDIT, AUTO-GENERATED CODE - SEE TOP FOR INSTRUCTIONS */
   uint32_t mode;
 };
+/* WARNING: DO NOT EDIT, AUTO-GENERATED CODE - SEE TOP FOR INSTRUCTIONS */
 struct audio_cal_info_sp_ex_vi_param {
   int32_t freq_q20[SP_V2_NUM_MAX_SPKRS];
-/* WARNING: DO NOT EDIT, AUTO-GENERATED CODE - SEE TOP FOR INSTRUCTIONS */
   int32_t resis_q24[SP_V2_NUM_MAX_SPKRS];
   int32_t qmct_q24[SP_V2_NUM_MAX_SPKRS];
+/* WARNING: DO NOT EDIT, AUTO-GENERATED CODE - SEE TOP FOR INSTRUCTIONS */
   int32_t status[SP_V2_NUM_MAX_SPKRS];
 };
-/* WARNING: DO NOT EDIT, AUTO-GENERATED CODE - SEE TOP FOR INSTRUCTIONS */
 struct audio_cal_info_sp_th_vi_param {
   int32_t r_dc_q24[SP_V2_NUM_MAX_SPKRS];
+/* WARNING: DO NOT EDIT, AUTO-GENERATED CODE - SEE TOP FOR INSTRUCTIONS */
   int32_t temp_q22[SP_V2_NUM_MAX_SPKRS];
   int32_t status[SP_V2_NUM_MAX_SPKRS];
-/* WARNING: DO NOT EDIT, AUTO-GENERATED CODE - SEE TOP FOR INSTRUCTIONS */
 };
 struct audio_cal_info_msm_spk_prot_status {
+/* WARNING: DO NOT EDIT, AUTO-GENERATED CODE - SEE TOP FOR INSTRUCTIONS */
   int32_t r0[SP_V2_NUM_MAX_SPKRS];
   int32_t status;
-/* WARNING: DO NOT EDIT, AUTO-GENERATED CODE - SEE TOP FOR INSTRUCTIONS */
 };
 struct audio_cal_info_sidetone {
+/* WARNING: DO NOT EDIT, AUTO-GENERATED CODE - SEE TOP FOR INSTRUCTIONS */
   uint16_t enable;
   uint16_t gain;
+  int32_t tx_acdb_id;
+  int32_t rx_acdb_id;
 /* WARNING: DO NOT EDIT, AUTO-GENERATED CODE - SEE TOP FOR INSTRUCTIONS */
+  int32_t mid;
+  int32_t pid;
+};
+#define MAX_SIDETONE_IIR_DATA_SIZE 224
+/* WARNING: DO NOT EDIT, AUTO-GENERATED CODE - SEE TOP FOR INSTRUCTIONS */
+#define MAX_NO_IIR_FILTER_STAGE 10
+struct audio_cal_info_sidetone_iir {
+  uint16_t iir_enable;
+  uint16_t num_biquad_stages;
+/* WARNING: DO NOT EDIT, AUTO-GENERATED CODE - SEE TOP FOR INSTRUCTIONS */
+  uint16_t pregain;
   int32_t tx_acdb_id;
   int32_t rx_acdb_id;
   int32_t mid;
-  int32_t pid;
 /* WARNING: DO NOT EDIT, AUTO-GENERATED CODE - SEE TOP FOR INSTRUCTIONS */
+  int32_t pid;
+  uint8_t iir_config[MAX_SIDETONE_IIR_DATA_SIZE];
 };
 struct audio_cal_info_lsm_top {
+/* WARNING: DO NOT EDIT, AUTO-GENERATED CODE - SEE TOP FOR INSTRUCTIONS */
   int32_t topology;
   int32_t acdb_id;
-/* WARNING: DO NOT EDIT, AUTO-GENERATED CODE - SEE TOP FOR INSTRUCTIONS */
   int32_t app_type;
 };
+/* WARNING: DO NOT EDIT, AUTO-GENERATED CODE - SEE TOP FOR INSTRUCTIONS */
 struct audio_cal_info_lsm {
   int32_t acdb_id;
-/* WARNING: DO NOT EDIT, AUTO-GENERATED CODE - SEE TOP FOR INSTRUCTIONS */
   int32_t path;
   int32_t app_type;
+/* WARNING: DO NOT EDIT, AUTO-GENERATED CODE - SEE TOP FOR INSTRUCTIONS */
 };
 struct audio_cal_info_voc_top {
-/* WARNING: DO NOT EDIT, AUTO-GENERATED CODE - SEE TOP FOR INSTRUCTIONS */
   int32_t topology;
   int32_t acdb_id;
+/* WARNING: DO NOT EDIT, AUTO-GENERATED CODE - SEE TOP FOR INSTRUCTIONS */
 };
 struct audio_cal_info_vocproc {
-/* WARNING: DO NOT EDIT, AUTO-GENERATED CODE - SEE TOP FOR INSTRUCTIONS */
   int32_t tx_acdb_id;
   int32_t rx_acdb_id;
+/* WARNING: DO NOT EDIT, AUTO-GENERATED CODE - SEE TOP FOR INSTRUCTIONS */
   int32_t tx_sample_rate;
   int32_t rx_sample_rate;
-/* WARNING: DO NOT EDIT, AUTO-GENERATED CODE - SEE TOP FOR INSTRUCTIONS */
 };
 enum {
+/* WARNING: DO NOT EDIT, AUTO-GENERATED CODE - SEE TOP FOR INSTRUCTIONS */
   DEFAULT_FEATURE_SET,
   VOL_BOOST_FEATURE_SET,
-/* WARNING: DO NOT EDIT, AUTO-GENERATED CODE - SEE TOP FOR INSTRUCTIONS */
 };
 struct audio_cal_info_vocvol {
+/* WARNING: DO NOT EDIT, AUTO-GENERATED CODE - SEE TOP FOR INSTRUCTIONS */
   int32_t tx_acdb_id;
   int32_t rx_acdb_id;
-/* WARNING: DO NOT EDIT, AUTO-GENERATED CODE - SEE TOP FOR INSTRUCTIONS */
   int32_t feature_set;
 };
+/* WARNING: DO NOT EDIT, AUTO-GENERATED CODE - SEE TOP FOR INSTRUCTIONS */
 struct audio_cal_info_vocdev_cfg {
   int32_t tx_acdb_id;
-/* WARNING: DO NOT EDIT, AUTO-GENERATED CODE - SEE TOP FOR INSTRUCTIONS */
   int32_t rx_acdb_id;
 };
+/* WARNING: DO NOT EDIT, AUTO-GENERATED CODE - SEE TOP FOR INSTRUCTIONS */
 #define MAX_VOICE_COLUMNS 20
 union audio_cal_col_na {
-/* WARNING: DO NOT EDIT, AUTO-GENERATED CODE - SEE TOP FOR INSTRUCTIONS */
   uint8_t val8;
   uint16_t val16;
+/* WARNING: DO NOT EDIT, AUTO-GENERATED CODE - SEE TOP FOR INSTRUCTIONS */
   uint32_t val32;
   uint64_t val64;
-/* WARNING: DO NOT EDIT, AUTO-GENERATED CODE - SEE TOP FOR INSTRUCTIONS */
 } __attribute__((packed));
 struct audio_cal_col {
+/* WARNING: DO NOT EDIT, AUTO-GENERATED CODE - SEE TOP FOR INSTRUCTIONS */
   uint32_t id;
   uint32_t type;
-/* WARNING: DO NOT EDIT, AUTO-GENERATED CODE - SEE TOP FOR INSTRUCTIONS */
   union audio_cal_col_na na_value;
 } __attribute__((packed));
+/* WARNING: DO NOT EDIT, AUTO-GENERATED CODE - SEE TOP FOR INSTRUCTIONS */
 struct audio_cal_col_data {
   uint32_t num_columns;
-/* WARNING: DO NOT EDIT, AUTO-GENERATED CODE - SEE TOP FOR INSTRUCTIONS */
   struct audio_cal_col column[MAX_VOICE_COLUMNS];
 } __attribute__((packed));
+/* WARNING: DO NOT EDIT, AUTO-GENERATED CODE - SEE TOP FOR INSTRUCTIONS */
 struct audio_cal_info_voc_col {
   int32_t table_id;
-/* WARNING: DO NOT EDIT, AUTO-GENERATED CODE - SEE TOP FOR INSTRUCTIONS */
   int32_t tx_acdb_id;
   int32_t rx_acdb_id;
+/* WARNING: DO NOT EDIT, AUTO-GENERATED CODE - SEE TOP FOR INSTRUCTIONS */
   struct audio_cal_col_data data;
 };
-/* WARNING: DO NOT EDIT, AUTO-GENERATED CODE - SEE TOP FOR INSTRUCTIONS */
 struct audio_cal_type_basic {
   struct audio_cal_type_header cal_hdr;
+/* WARNING: DO NOT EDIT, AUTO-GENERATED CODE - SEE TOP FOR INSTRUCTIONS */
   struct audio_cal_data cal_data;
 };
-/* WARNING: DO NOT EDIT, AUTO-GENERATED CODE - SEE TOP FOR INSTRUCTIONS */
 struct audio_cal_basic {
   struct audio_cal_header hdr;
+/* WARNING: DO NOT EDIT, AUTO-GENERATED CODE - SEE TOP FOR INSTRUCTIONS */
   struct audio_cal_type_basic cal_type;
 };
-/* WARNING: DO NOT EDIT, AUTO-GENERATED CODE - SEE TOP FOR INSTRUCTIONS */
 struct audio_cal_type_adm_top {
   struct audio_cal_type_header cal_hdr;
+/* WARNING: DO NOT EDIT, AUTO-GENERATED CODE - SEE TOP FOR INSTRUCTIONS */
   struct audio_cal_data cal_data;
   struct audio_cal_info_adm_top cal_info;
-/* WARNING: DO NOT EDIT, AUTO-GENERATED CODE - SEE TOP FOR INSTRUCTIONS */
 };
 struct audio_cal_adm_top {
+/* WARNING: DO NOT EDIT, AUTO-GENERATED CODE - SEE TOP FOR INSTRUCTIONS */
   struct audio_cal_header hdr;
   struct audio_cal_type_adm_top cal_type;
-/* WARNING: DO NOT EDIT, AUTO-GENERATED CODE - SEE TOP FOR INSTRUCTIONS */
 };
 struct audio_cal_type_metainfo {
+/* WARNING: DO NOT EDIT, AUTO-GENERATED CODE - SEE TOP FOR INSTRUCTIONS */
   struct audio_cal_type_header cal_hdr;
   struct audio_cal_data cal_data;
-/* WARNING: DO NOT EDIT, AUTO-GENERATED CODE - SEE TOP FOR INSTRUCTIONS */
   struct audio_cal_info_metainfo cal_info;
 };
+/* WARNING: DO NOT EDIT, AUTO-GENERATED CODE - SEE TOP FOR INSTRUCTIONS */
 struct audio_core_metainfo {
   struct audio_cal_header hdr;
-/* WARNING: DO NOT EDIT, AUTO-GENERATED CODE - SEE TOP FOR INSTRUCTIONS */
   struct audio_cal_type_metainfo cal_type;
 };
+/* WARNING: DO NOT EDIT, AUTO-GENERATED CODE - SEE TOP FOR INSTRUCTIONS */
 struct audio_cal_type_audproc {
   struct audio_cal_type_header cal_hdr;
-/* WARNING: DO NOT EDIT, AUTO-GENERATED CODE - SEE TOP FOR INSTRUCTIONS */
   struct audio_cal_data cal_data;
   struct audio_cal_info_audproc cal_info;
+/* WARNING: DO NOT EDIT, AUTO-GENERATED CODE - SEE TOP FOR INSTRUCTIONS */
 };
 struct audio_cal_audproc {
-/* WARNING: DO NOT EDIT, AUTO-GENERATED CODE - SEE TOP FOR INSTRUCTIONS */
   struct audio_cal_header hdr;
   struct audio_cal_type_audproc cal_type;
+/* WARNING: DO NOT EDIT, AUTO-GENERATED CODE - SEE TOP FOR INSTRUCTIONS */
 };
 struct audio_cal_type_audvol {
-/* WARNING: DO NOT EDIT, AUTO-GENERATED CODE - SEE TOP FOR INSTRUCTIONS */
   struct audio_cal_type_header cal_hdr;
   struct audio_cal_data cal_data;
+/* WARNING: DO NOT EDIT, AUTO-GENERATED CODE - SEE TOP FOR INSTRUCTIONS */
   struct audio_cal_info_audvol cal_info;
 };
-/* WARNING: DO NOT EDIT, AUTO-GENERATED CODE - SEE TOP FOR INSTRUCTIONS */
 struct audio_cal_audvol {
   struct audio_cal_header hdr;
+/* WARNING: DO NOT EDIT, AUTO-GENERATED CODE - SEE TOP FOR INSTRUCTIONS */
   struct audio_cal_type_audvol cal_type;
 };
-/* WARNING: DO NOT EDIT, AUTO-GENERATED CODE - SEE TOP FOR INSTRUCTIONS */
 struct audio_cal_type_asm_top {
   struct audio_cal_type_header cal_hdr;
+/* WARNING: DO NOT EDIT, AUTO-GENERATED CODE - SEE TOP FOR INSTRUCTIONS */
   struct audio_cal_data cal_data;
   struct audio_cal_info_asm_top cal_info;
-/* WARNING: DO NOT EDIT, AUTO-GENERATED CODE - SEE TOP FOR INSTRUCTIONS */
 };
 struct audio_cal_asm_top {
+/* WARNING: DO NOT EDIT, AUTO-GENERATED CODE - SEE TOP FOR INSTRUCTIONS */
   struct audio_cal_header hdr;
   struct audio_cal_type_asm_top cal_type;
-/* WARNING: DO NOT EDIT, AUTO-GENERATED CODE - SEE TOP FOR INSTRUCTIONS */
 };
 struct audio_cal_type_audstrm {
+/* WARNING: DO NOT EDIT, AUTO-GENERATED CODE - SEE TOP FOR INSTRUCTIONS */
   struct audio_cal_type_header cal_hdr;
   struct audio_cal_data cal_data;
-/* WARNING: DO NOT EDIT, AUTO-GENERATED CODE - SEE TOP FOR INSTRUCTIONS */
   struct audio_cal_info_audstrm cal_info;
 };
+/* WARNING: DO NOT EDIT, AUTO-GENERATED CODE - SEE TOP FOR INSTRUCTIONS */
 struct audio_cal_audstrm {
   struct audio_cal_header hdr;
-/* WARNING: DO NOT EDIT, AUTO-GENERATED CODE - SEE TOP FOR INSTRUCTIONS */
   struct audio_cal_type_audstrm cal_type;
 };
+/* WARNING: DO NOT EDIT, AUTO-GENERATED CODE - SEE TOP FOR INSTRUCTIONS */
 struct audio_cal_type_afe {
   struct audio_cal_type_header cal_hdr;
-/* WARNING: DO NOT EDIT, AUTO-GENERATED CODE - SEE TOP FOR INSTRUCTIONS */
   struct audio_cal_data cal_data;
   struct audio_cal_info_afe cal_info;
+/* WARNING: DO NOT EDIT, AUTO-GENERATED CODE - SEE TOP FOR INSTRUCTIONS */
 };
 struct audio_cal_afe {
-/* WARNING: DO NOT EDIT, AUTO-GENERATED CODE - SEE TOP FOR INSTRUCTIONS */
   struct audio_cal_header hdr;
   struct audio_cal_type_afe cal_type;
+/* WARNING: DO NOT EDIT, AUTO-GENERATED CODE - SEE TOP FOR INSTRUCTIONS */
 };
 struct audio_cal_type_afe_top {
-/* WARNING: DO NOT EDIT, AUTO-GENERATED CODE - SEE TOP FOR INSTRUCTIONS */
   struct audio_cal_type_header cal_hdr;
   struct audio_cal_data cal_data;
+/* WARNING: DO NOT EDIT, AUTO-GENERATED CODE - SEE TOP FOR INSTRUCTIONS */
   struct audio_cal_info_afe_top cal_info;
 };
-/* WARNING: DO NOT EDIT, AUTO-GENERATED CODE - SEE TOP FOR INSTRUCTIONS */
 struct audio_cal_afe_top {
   struct audio_cal_header hdr;
+/* WARNING: DO NOT EDIT, AUTO-GENERATED CODE - SEE TOP FOR INSTRUCTIONS */
   struct audio_cal_type_afe_top cal_type;
 };
-/* WARNING: DO NOT EDIT, AUTO-GENERATED CODE - SEE TOP FOR INSTRUCTIONS */
 struct audio_cal_type_aanc {
   struct audio_cal_type_header cal_hdr;
+/* WARNING: DO NOT EDIT, AUTO-GENERATED CODE - SEE TOP FOR INSTRUCTIONS */
   struct audio_cal_data cal_data;
   struct audio_cal_info_aanc cal_info;
-/* WARNING: DO NOT EDIT, AUTO-GENERATED CODE - SEE TOP FOR INSTRUCTIONS */
 };
 struct audio_cal_aanc {
+/* WARNING: DO NOT EDIT, AUTO-GENERATED CODE - SEE TOP FOR INSTRUCTIONS */
   struct audio_cal_header hdr;
   struct audio_cal_type_aanc cal_type;
-/* WARNING: DO NOT EDIT, AUTO-GENERATED CODE - SEE TOP FOR INSTRUCTIONS */
 };
 struct audio_cal_type_fb_spk_prot_cfg {
+/* WARNING: DO NOT EDIT, AUTO-GENERATED CODE - SEE TOP FOR INSTRUCTIONS */
   struct audio_cal_type_header cal_hdr;
   struct audio_cal_data cal_data;
-/* WARNING: DO NOT EDIT, AUTO-GENERATED CODE - SEE TOP FOR INSTRUCTIONS */
   struct audio_cal_info_spk_prot_cfg cal_info;
 };
+/* WARNING: DO NOT EDIT, AUTO-GENERATED CODE - SEE TOP FOR INSTRUCTIONS */
 struct audio_cal_fb_spk_prot_cfg {
   struct audio_cal_header hdr;
-/* WARNING: DO NOT EDIT, AUTO-GENERATED CODE - SEE TOP FOR INSTRUCTIONS */
   struct audio_cal_type_fb_spk_prot_cfg cal_type;
 };
+/* WARNING: DO NOT EDIT, AUTO-GENERATED CODE - SEE TOP FOR INSTRUCTIONS */
 struct audio_cal_type_sp_th_vi_ftm_cfg {
   struct audio_cal_type_header cal_hdr;
-/* WARNING: DO NOT EDIT, AUTO-GENERATED CODE - SEE TOP FOR INSTRUCTIONS */
   struct audio_cal_data cal_data;
   struct audio_cal_info_sp_th_vi_ftm_cfg cal_info;
+/* WARNING: DO NOT EDIT, AUTO-GENERATED CODE - SEE TOP FOR INSTRUCTIONS */
 };
 struct audio_cal_sp_th_vi_ftm_cfg {
-/* WARNING: DO NOT EDIT, AUTO-GENERATED CODE - SEE TOP FOR INSTRUCTIONS */
   struct audio_cal_header hdr;
   struct audio_cal_type_sp_th_vi_ftm_cfg cal_type;
+/* WARNING: DO NOT EDIT, AUTO-GENERATED CODE - SEE TOP FOR INSTRUCTIONS */
 };
 struct audio_cal_type_sp_ex_vi_ftm_cfg {
-/* WARNING: DO NOT EDIT, AUTO-GENERATED CODE - SEE TOP FOR INSTRUCTIONS */
   struct audio_cal_type_header cal_hdr;
   struct audio_cal_data cal_data;
+/* WARNING: DO NOT EDIT, AUTO-GENERATED CODE - SEE TOP FOR INSTRUCTIONS */
   struct audio_cal_info_sp_ex_vi_ftm_cfg cal_info;
 };
-/* WARNING: DO NOT EDIT, AUTO-GENERATED CODE - SEE TOP FOR INSTRUCTIONS */
 struct audio_cal_sp_ex_vi_ftm_cfg {
   struct audio_cal_header hdr;
+/* WARNING: DO NOT EDIT, AUTO-GENERATED CODE - SEE TOP FOR INSTRUCTIONS */
   struct audio_cal_type_sp_ex_vi_ftm_cfg cal_type;
 };
-/* WARNING: DO NOT EDIT, AUTO-GENERATED CODE - SEE TOP FOR INSTRUCTIONS */
 struct audio_cal_type_hw_delay {
   struct audio_cal_type_header cal_hdr;
+/* WARNING: DO NOT EDIT, AUTO-GENERATED CODE - SEE TOP FOR INSTRUCTIONS */
   struct audio_cal_data cal_data;
   struct audio_cal_info_hw_delay cal_info;
-/* WARNING: DO NOT EDIT, AUTO-GENERATED CODE - SEE TOP FOR INSTRUCTIONS */
 };
 struct audio_cal_hw_delay {
+/* WARNING: DO NOT EDIT, AUTO-GENERATED CODE - SEE TOP FOR INSTRUCTIONS */
   struct audio_cal_header hdr;
   struct audio_cal_type_hw_delay cal_type;
-/* WARNING: DO NOT EDIT, AUTO-GENERATED CODE - SEE TOP FOR INSTRUCTIONS */
 };
 struct audio_cal_type_sidetone {
+/* WARNING: DO NOT EDIT, AUTO-GENERATED CODE - SEE TOP FOR INSTRUCTIONS */
   struct audio_cal_type_header cal_hdr;
   struct audio_cal_data cal_data;
-/* WARNING: DO NOT EDIT, AUTO-GENERATED CODE - SEE TOP FOR INSTRUCTIONS */
   struct audio_cal_info_sidetone cal_info;
 };
+/* WARNING: DO NOT EDIT, AUTO-GENERATED CODE - SEE TOP FOR INSTRUCTIONS */
 struct audio_cal_sidetone {
   struct audio_cal_header hdr;
-/* WARNING: DO NOT EDIT, AUTO-GENERATED CODE - SEE TOP FOR INSTRUCTIONS */
   struct audio_cal_type_sidetone cal_type;
+};
+/* WARNING: DO NOT EDIT, AUTO-GENERATED CODE - SEE TOP FOR INSTRUCTIONS */
+struct audio_cal_type_sidetone_iir {
+  struct audio_cal_type_header cal_hdr;
+  struct audio_cal_data cal_data;
+  struct audio_cal_info_sidetone_iir cal_info;
+/* WARNING: DO NOT EDIT, AUTO-GENERATED CODE - SEE TOP FOR INSTRUCTIONS */
+};
+struct audio_cal_sidetone_iir {
+  struct audio_cal_header hdr;
+  struct audio_cal_type_sidetone_iir cal_type;
+/* WARNING: DO NOT EDIT, AUTO-GENERATED CODE - SEE TOP FOR INSTRUCTIONS */
 };
 struct audio_cal_type_lsm_top {
   struct audio_cal_type_header cal_hdr;
-/* WARNING: DO NOT EDIT, AUTO-GENERATED CODE - SEE TOP FOR INSTRUCTIONS */
   struct audio_cal_data cal_data;
+/* WARNING: DO NOT EDIT, AUTO-GENERATED CODE - SEE TOP FOR INSTRUCTIONS */
   struct audio_cal_info_lsm_top cal_info;
 };
 struct audio_cal_lsm_top {
-/* WARNING: DO NOT EDIT, AUTO-GENERATED CODE - SEE TOP FOR INSTRUCTIONS */
   struct audio_cal_header hdr;
+/* WARNING: DO NOT EDIT, AUTO-GENERATED CODE - SEE TOP FOR INSTRUCTIONS */
   struct audio_cal_type_lsm_top cal_type;
 };
 struct audio_cal_type_lsm {
-/* WARNING: DO NOT EDIT, AUTO-GENERATED CODE - SEE TOP FOR INSTRUCTIONS */
   struct audio_cal_type_header cal_hdr;
+/* WARNING: DO NOT EDIT, AUTO-GENERATED CODE - SEE TOP FOR INSTRUCTIONS */
   struct audio_cal_data cal_data;
   struct audio_cal_info_lsm cal_info;
 };
-/* WARNING: DO NOT EDIT, AUTO-GENERATED CODE - SEE TOP FOR INSTRUCTIONS */
 struct audio_cal_lsm {
+/* WARNING: DO NOT EDIT, AUTO-GENERATED CODE - SEE TOP FOR INSTRUCTIONS */
   struct audio_cal_header hdr;
   struct audio_cal_type_lsm cal_type;
 };
-/* WARNING: DO NOT EDIT, AUTO-GENERATED CODE - SEE TOP FOR INSTRUCTIONS */
 struct audio_cal_type_voc_top {
+/* WARNING: DO NOT EDIT, AUTO-GENERATED CODE - SEE TOP FOR INSTRUCTIONS */
   struct audio_cal_type_header cal_hdr;
   struct audio_cal_data cal_data;
   struct audio_cal_info_voc_top cal_info;
-/* WARNING: DO NOT EDIT, AUTO-GENERATED CODE - SEE TOP FOR INSTRUCTIONS */
 };
+/* WARNING: DO NOT EDIT, AUTO-GENERATED CODE - SEE TOP FOR INSTRUCTIONS */
 struct audio_cal_voc_top {
   struct audio_cal_header hdr;
   struct audio_cal_type_voc_top cal_type;
-/* WARNING: DO NOT EDIT, AUTO-GENERATED CODE - SEE TOP FOR INSTRUCTIONS */
 };
+/* WARNING: DO NOT EDIT, AUTO-GENERATED CODE - SEE TOP FOR INSTRUCTIONS */
 struct audio_cal_type_vocproc {
   struct audio_cal_type_header cal_hdr;
   struct audio_cal_data cal_data;
-/* WARNING: DO NOT EDIT, AUTO-GENERATED CODE - SEE TOP FOR INSTRUCTIONS */
   struct audio_cal_info_vocproc cal_info;
+/* WARNING: DO NOT EDIT, AUTO-GENERATED CODE - SEE TOP FOR INSTRUCTIONS */
 };
 struct audio_cal_vocproc {
   struct audio_cal_header hdr;
-/* WARNING: DO NOT EDIT, AUTO-GENERATED CODE - SEE TOP FOR INSTRUCTIONS */
   struct audio_cal_type_vocproc cal_type;
+/* WARNING: DO NOT EDIT, AUTO-GENERATED CODE - SEE TOP FOR INSTRUCTIONS */
 };
 struct audio_cal_type_vocvol {
   struct audio_cal_type_header cal_hdr;
-/* WARNING: DO NOT EDIT, AUTO-GENERATED CODE - SEE TOP FOR INSTRUCTIONS */
   struct audio_cal_data cal_data;
+/* WARNING: DO NOT EDIT, AUTO-GENERATED CODE - SEE TOP FOR INSTRUCTIONS */
   struct audio_cal_info_vocvol cal_info;
 };
 struct audio_cal_vocvol {
-/* WARNING: DO NOT EDIT, AUTO-GENERATED CODE - SEE TOP FOR INSTRUCTIONS */
   struct audio_cal_header hdr;
+/* WARNING: DO NOT EDIT, AUTO-GENERATED CODE - SEE TOP FOR INSTRUCTIONS */
   struct audio_cal_type_vocvol cal_type;
 };
 struct audio_cal_type_vocdev_cfg {
-/* WARNING: DO NOT EDIT, AUTO-GENERATED CODE - SEE TOP FOR INSTRUCTIONS */
   struct audio_cal_type_header cal_hdr;
+/* WARNING: DO NOT EDIT, AUTO-GENERATED CODE - SEE TOP FOR INSTRUCTIONS */
   struct audio_cal_data cal_data;
   struct audio_cal_info_vocdev_cfg cal_info;
 };
-/* WARNING: DO NOT EDIT, AUTO-GENERATED CODE - SEE TOP FOR INSTRUCTIONS */
 struct audio_cal_vocdev_cfg {
+/* WARNING: DO NOT EDIT, AUTO-GENERATED CODE - SEE TOP FOR INSTRUCTIONS */
   struct audio_cal_header hdr;
   struct audio_cal_type_vocdev_cfg cal_type;
 };
-/* WARNING: DO NOT EDIT, AUTO-GENERATED CODE - SEE TOP FOR INSTRUCTIONS */
 struct audio_cal_type_voc_col {
+/* WARNING: DO NOT EDIT, AUTO-GENERATED CODE - SEE TOP FOR INSTRUCTIONS */
   struct audio_cal_type_header cal_hdr;
   struct audio_cal_data cal_data;
   struct audio_cal_info_voc_col cal_info;
-/* WARNING: DO NOT EDIT, AUTO-GENERATED CODE - SEE TOP FOR INSTRUCTIONS */
 };
+/* WARNING: DO NOT EDIT, AUTO-GENERATED CODE - SEE TOP FOR INSTRUCTIONS */
 struct audio_cal_voc_col {
   struct audio_cal_header hdr;
   struct audio_cal_type_voc_col cal_type;
-/* WARNING: DO NOT EDIT, AUTO-GENERATED CODE - SEE TOP FOR INSTRUCTIONS */
 };
+/* WARNING: DO NOT EDIT, AUTO-GENERATED CODE - SEE TOP FOR INSTRUCTIONS */
 struct audio_cal_type_fb_spk_prot_status {
   struct audio_cal_type_header cal_hdr;
   struct audio_cal_data cal_data;
-/* WARNING: DO NOT EDIT, AUTO-GENERATED CODE - SEE TOP FOR INSTRUCTIONS */
   struct audio_cal_info_msm_spk_prot_status cal_info;
+/* WARNING: DO NOT EDIT, AUTO-GENERATED CODE - SEE TOP FOR INSTRUCTIONS */
 };
 struct audio_cal_fb_spk_prot_status {
   struct audio_cal_header hdr;
-/* WARNING: DO NOT EDIT, AUTO-GENERATED CODE - SEE TOP FOR INSTRUCTIONS */
   struct audio_cal_type_fb_spk_prot_status cal_type;
+/* WARNING: DO NOT EDIT, AUTO-GENERATED CODE - SEE TOP FOR INSTRUCTIONS */
 };
 struct audio_cal_type_sp_th_vi_param {
   struct audio_cal_type_header cal_hdr;
-/* WARNING: DO NOT EDIT, AUTO-GENERATED CODE - SEE TOP FOR INSTRUCTIONS */
   struct audio_cal_data cal_data;
+/* WARNING: DO NOT EDIT, AUTO-GENERATED CODE - SEE TOP FOR INSTRUCTIONS */
   struct audio_cal_info_sp_th_vi_param cal_info;
 };
 struct audio_cal_sp_th_vi_param {
-/* WARNING: DO NOT EDIT, AUTO-GENERATED CODE - SEE TOP FOR INSTRUCTIONS */
   struct audio_cal_header hdr;
+/* WARNING: DO NOT EDIT, AUTO-GENERATED CODE - SEE TOP FOR INSTRUCTIONS */
   struct audio_cal_type_sp_th_vi_param cal_type;
 };
 struct audio_cal_type_sp_ex_vi_param {
-/* WARNING: DO NOT EDIT, AUTO-GENERATED CODE - SEE TOP FOR INSTRUCTIONS */
   struct audio_cal_type_header cal_hdr;
+/* WARNING: DO NOT EDIT, AUTO-GENERATED CODE - SEE TOP FOR INSTRUCTIONS */
   struct audio_cal_data cal_data;
   struct audio_cal_info_sp_ex_vi_param cal_info;
 };
-/* WARNING: DO NOT EDIT, AUTO-GENERATED CODE - SEE TOP FOR INSTRUCTIONS */
 struct audio_cal_sp_ex_vi_param {
+/* WARNING: DO NOT EDIT, AUTO-GENERATED CODE - SEE TOP FOR INSTRUCTIONS */
   struct audio_cal_header hdr;
   struct audio_cal_type_sp_ex_vi_param cal_type;
 };
-/* WARNING: DO NOT EDIT, AUTO-GENERATED CODE - SEE TOP FOR INSTRUCTIONS */
 #endif
+/* WARNING: DO NOT EDIT, AUTO-GENERATED CODE - SEE TOP FOR INSTRUCTIONS */
 
