@@ -66,7 +66,7 @@ struct qseecom_load_img_req {
   char img_name[MAX_APP_NAME_SIZE];
   uint32_t app_arch;
 /* WARNING: DO NOT EDIT, AUTO-GENERATED CODE - SEE TOP FOR INSTRUCTIONS */
-  int app_id;
+  uint32_t app_id;
 };
 struct qseecom_set_sb_mem_param_req {
   int32_t ifd_data_fd;
@@ -81,7 +81,7 @@ struct qseecom_qseos_version_req {
 struct qseecom_qseos_app_load_query {
   char app_name[MAX_APP_NAME_SIZE];
 /* WARNING: DO NOT EDIT, AUTO-GENERATED CODE - SEE TOP FOR INSTRUCTIONS */
-  int app_id;
+  uint32_t app_id;
   uint32_t app_arch;
 };
 struct qseecom_send_svc_cmd_req {
