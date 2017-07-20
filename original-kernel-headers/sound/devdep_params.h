@@ -1,5 +1,5 @@
 /*
- * Copyright (c) 2013-2015, The Linux Foundation. All rights reserved.
+ * Copyright (c) 2013-2015,2017, The Linux Foundation. All rights reserved.
  *
  * This program is free software; you can redistribute it and/or modify
  * it under the terms of the GNU General Public License version 2 and
@@ -20,7 +20,7 @@ struct dolby_param_data {
 	int32_t be_id;
 	int32_t param_id;
 	int32_t length;
-	int32_t __user *data;
+	int32_t *data;
 };
 
 struct dolby_param_license {
@@ -64,9 +64,9 @@ struct dts_eagle_param_desc {
 	uint32_t size;
 	int32_t offset;
 	uint32_t device;
-} __packed;
+} __attribute__((packed));
 
-#define HWDEP_FE_BASE                   3000 // unique base for FE hw dep nodes
+#define HWDEP_FE_BASE                   3000 /*unique base for FE hw dep nodes*/
 struct snd_pcm_mmap_fd {
 	int32_t dir;
 	int32_t fd;
