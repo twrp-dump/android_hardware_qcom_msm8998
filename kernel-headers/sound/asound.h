@@ -20,6 +20,7 @@
 #define __SOUND_ASOUND_H
 #include <linux/types.h>
 #include <stdlib.h>
+#include <time.h>
 /* WARNING: DO NOT EDIT, AUTO-GENERATED CODE - SEE TOP FOR INSTRUCTIONS */
 #define SNDRV_PROTOCOL_VERSION(major,minor,subminor) (((major) << 16) | ((minor) << 8) | (subminor))
 #define SNDRV_PROTOCOL_MAJOR(version) (((version) >> 16) & 0xffff)
