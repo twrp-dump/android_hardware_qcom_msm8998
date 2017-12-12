@@ -12,4 +12,8 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 
-PRODUCT_VENDOR_KERNEL_HEADERS := hardware/qcom/msm8998/kernel-headers
+ifneq ($(BOARD_USES_QCOM_HARDWARE),true)
+  ifneq ($(TARGET_COMPILE_WITH_MSM_KERNEL),true)
+    PRODUCT_VENDOR_KERNEL_HEADERS := hardware/qcom/msm8998/kernel-headers
+  endif
+endif
