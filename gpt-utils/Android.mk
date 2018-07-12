@@ -14,6 +14,8 @@
 # limitations under the License.
 #
 
+ifneq ($(BOARD_PROVIDES_GPTUTILS),true)
+
 LOCAL_PATH := $(call my-dir)
 
 gpt_utils_common_cflags := -Wall -Werror
@@ -45,3 +47,5 @@ LOCAL_COPY_HEADERS_TO := gpt-utils/inc
 LOCAL_COPY_HEADERS := gpt-utils.h
 LOCAL_CFLAGS := $(gpt_utils_common_cflags)
 include $(BUILD_SHARED_LIBRARY)
+
+endif
